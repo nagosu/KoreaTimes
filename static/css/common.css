@@ -5,7 +5,6 @@
   --primary-button-color: #1b3133;
   --primary-button-hover-color: #1e5558;
   --border-light-color: #ccc;
-  --border-dark-color: #333;
   --modal-button-color: #7749f8;
   --modal-button-hover-color: #5f3dc4;
   --background-main-color: #f8f8f8;
@@ -19,4 +18,306 @@
   width: 100%;
   height: 100%;
   background-color: var(--background-main-color);
+}
+
+/* Navbar (GNB) */
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 0 30px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-light-color);
+  z-index: 1000;
+}
+
+.navbar .profile-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar .profile-container .profile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar .profile-container .profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navbar .profile-container .profile span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.navbar .divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2px;
+  height: 35px;
+  background-color: var(--border-light-color);
+}
+
+.navbar .profile-container .navbar-logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 35px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  background-color: var(--primary-button-color);
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.navbar .profile-container .navbar-logout-button:hover {
+  background-color: var(--primary-button-hover-color);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: calc(100% - 70px);
+  padding: 30px 0;
+  margin-top: 70px;
+  overflow-y: auto;
+  gap: 10px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 250px;
+  height: fit-content;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  border-bottom: 3px solid #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.sidebar .sidebar-header .sidebar-header-title {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.sidebar .sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0;
+  gap: 40px;
+}
+
+.sidebar .sidebar-content .sidebar-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar-menu-container .sidebar-menu-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.sidebar-menu-container .sidebar-menu-title.active h3 {
+  font-weight: bold;
+}
+
+.sidebar-menu-container .sidebar-menu-title h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.sidebar-menu-container .sidebar-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar-menu-container .sidebar-menu-list .sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  height: 40px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.sidebar-menu-container .sidebar-menu-list .sidebar-menu-item.active {
+  font-weight: bold;
+}
+
+.sidebar-menu-container .sidebar-menu-list .sidebar-menu-item:hover {
+  background-color: var(--primary-highlight-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 200px);
+  height: fit-content;
+  padding: 15px 20px;
+  margin-right: 10px;
+  background-color: var(--background-main-color);
+  gap: 10px;
+}
+
+.main-content .main-content-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.main-content .main-content-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.modal-logout-confirm-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.modal-logout-confirm-overlay.fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+.modal-logout-confirm-overlay .modal-logout-confirm-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fefefe;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  height: 140px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s;
+}
+
+.modal-logout-confirm-overlay
+  .modal-logout-confirm-content
+  .modal-logout-confirm-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 0 20px;
+}
+
+.modal-logout-confirm-message-container span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.modal-logout-confirm-overlay .modal-logout-confirm-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+.modal-logout-confirm-button-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  transition: background-color 0.3s;
+}
+
+.modal-logout-confirm-button-container button:first-child {
+  background-color: #7749f8;
+  color: #fff;
+}
+
+.modal-logout-confirm-button-container button:last-child {
+  color: #111;
+  background-color: #ddd;
+}
+
+.modal-logout-confirm-button-container button:first-child:hover {
+  background-color: #5f3dc4;
+}
+
+.modal-logout-confirm-button-container button:last-child:hover {
+  background-color: #bbb;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: 40%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
 }
