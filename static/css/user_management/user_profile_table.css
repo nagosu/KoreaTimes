@@ -1,0 +1,23 @@
+.usage-history__table-item--no {
+  width: 15%;
+}
+
+.usage-history__table-item--date {
+  width: 25%;
+}
+
+.usage-history__table-item--language {
+  width: 20%;
+}
+
+.usage-history__table-item--gpt {
+  width: 5%;
+}
+
+.usage-history__table-item--category {
+  width: 20%;
+}
+
+.usage-history__table-item--download {
+  width: 15%;
+}

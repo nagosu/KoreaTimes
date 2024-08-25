@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../static/css/reset.css" />
     <link rel="stylesheet" href="../../static/css/common.css" />
+    <link
+      rel="stylesheet"
+      href="../../static/css/user_management/user_profile_table.css"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -97,6 +101,295 @@
             <h2 class="main-content-header-title">회원 정보</h2>
           </div>
           <!-- //타이틀 -->
+
+          <!-- 필터 -->
+          <div class="filter-container">
+            <!-- 정렬 순서 필터 -->
+            <fieldset class="filter-mode-container">
+              <label>
+                <input type="radio" name="contact" value="email" checked />
+                <span>최신순</span>
+              </label>
+              <label>
+                <input type="radio" name="contact" value="phone" />
+                <span>이름순</span>
+              </label>
+            </fieldset>
+            <!-- //정렬 순서 필터 -->
+
+            <!-- 검색 필터 -->
+            <div class="filter-wrapper">
+              <div class="filter-dropdown-container">
+                <div class="dropdown-date-container">
+                  <span class="dropdown-title">기간</span>
+                  <div class="date-input-container">
+                    <input
+                      type="text"
+                      class="date-input"
+                      placeholder="YYYY/MM/DD"
+                    />
+                    <span class="date-range-separator">~</span>
+                    <input
+                      type="text"
+                      class="date-input"
+                      placeholder="YYYY/MM/DD"
+                    />
+                  </div>
+                </div>
+                <div class="dropdown-search-container">
+                  <span class="dropdown-title">검색</span>
+                  <div class="dropdown-wrapper">
+                    <div class="dropdown">
+                      <div class="selected">
+                        카테고리
+                        <img
+                          src="../../static/images/icon/svg/Arrow_drop_down.svg"
+                          alt="드롭다운 화살표"
+                          class="triangle"
+                        />
+                      </div>
+                      <div class="dropdown-menu">
+                        <div>이름</div>
+                        <div>이메일</div>
+                        <div>핸드폰 번호</div>
+                        <div>성별</div>
+                        <div>닉네임</div>
+                      </div>
+                    </div>
+                    <div class="search-input-container">
+                      <input type="text" placeholder="Search" />
+                      <img
+                        src="../../static/images/icon/svg/Search_light.svg"
+                        alt="검색"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="search-button">조회</button>
+            </div>
+            <!-- //검색 필터 -->
+          </div>
+          <!-- //필터 -->
+
+          <!-- 회원 정보 테이블 -->
+          <table class="usage-history__table">
+            <thead class="usage-history__table-header">
+              <tr class="usage-history__table-container">
+                <th
+                  class="usage-history__table-item usage-history__table-item--no"
+                >
+                  이름
+                </th>
+                <th
+                  class="usage-history__table-item usage-history__table-item--date"
+                >
+                  이메일
+                </th>
+                <th
+                  class="usage-history__table-item usage-history__table-item--language"
+                >
+                  핸드폰 번호
+                </th>
+                <th
+                  class="usage-history__table-item usage-history__table-item--gpt"
+                >
+                  성별
+                </th>
+                <th
+                  class="usage-history__table-item usage-history__table-item--category"
+                >
+                  닉네임
+                </th>
+                <th
+                  class="usage-history__table-item usage-history__table-item--download"
+                >
+                  가입일
+                </th>
+              </tr>
+            </thead>
+            <tbody class="usage-history__table-data">
+              <tr class="usage-history__table-container">
+                <td
+                  class="usage-history__table-item usage-history__table-item--no"
+                >
+                  엔디고
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--date"
+                >
+                  koreatimes@endigo.co.kr
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--language"
+                >
+                  010-1234-5678
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--gpt"
+                >
+                  남
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--category"
+                >
+                  고디엔
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--download"
+                >
+                  2024.07.30
+                </td>
+              </tr>
+              <tr class="usage-history__table-container">
+                <td
+                  class="usage-history__table-item usage-history__table-item--no"
+                >
+                  엔디고
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--date"
+                >
+                  koreatimes@endigo.co.kr
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--language"
+                >
+                  010-1234-5678
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--gpt"
+                >
+                  남
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--category"
+                >
+                  고디엔
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--download"
+                >
+                  2024.07.30
+                </td>
+              </tr>
+              <tr class="usage-history__table-container">
+                <td
+                  class="usage-history__table-item usage-history__table-item--no"
+                >
+                  엔디고
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--date"
+                >
+                  koreatimes@endigo.co.kr
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--language"
+                >
+                  010-1234-5678
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--gpt"
+                >
+                  남
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--category"
+                >
+                  고디엔
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--download"
+                >
+                  2024.07.30
+                </td>
+              </tr>
+              <tr class="usage-history__table-container">
+                <td
+                  class="usage-history__table-item usage-history__table-item--no"
+                >
+                  엔디고
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--date"
+                >
+                  koreatimes@endigo.co.kr
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--language"
+                >
+                  010-1234-5678
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--gpt"
+                >
+                  남
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--category"
+                >
+                  고디엔
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--download"
+                >
+                  2024.07.30
+                </td>
+              </tr>
+              <tr class="usage-history__table-container">
+                <td
+                  class="usage-history__table-item usage-history__table-item--no"
+                >
+                  엔디고
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--date"
+                >
+                  koreatimes@endigo.co.kr
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--language"
+                >
+                  010-1234-5678
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--gpt"
+                >
+                  남
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--category"
+                >
+                  고디엔
+                </td>
+                <td
+                  class="usage-history__table-item usage-history__table-item--download"
+                >
+                  2024.07.30
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- //회원 정보 테이블 -->
+
+          <!-- 페이지네이션 -->
+          <div class="pagination">
+            <button class="pagination__button-prev">
+              <img src="../../static/images/icon/svg/Expand_left_double.svg" />
+            </button>
+            <button class="pagination__button pagination__button--active">
+              1
+            </button>
+            <button class="pagination__button">2</button>
+            <button class="pagination__button">3</button>
+            <button class="pagination__button">4</button>
+            <button class="pagination__button">5</button>
+            <button class="pagination__button-next">
+              <img src="../../static/images/icon/svg/Expand_right_double.svg" />
+            </button>
+          </div>
+          <!-- //페이지네이션 -->
         </div>
         <!-- //메인 컨텐츠 -->
       </div>
@@ -133,5 +426,6 @@
 
     <!-- 스크립트 -->
     <script src="../../static/js/logout/logout.js"></script>
+    <script src="../../static/js/user_management/user_profile_table.js"></script>
   </body>
 </html>
