@@ -1,7 +1,6 @@
 // 드롭다운 메뉴를 클릭하면 활성화/비활성화
 document.addEventListener("click", function (event) {
   const dropdown = document.querySelector(".dropdown");
-  const selected = document.querySelector(".selected");
   const dropdownMenu = document.querySelector(".dropdown-menu");
 
   if (dropdown.contains(event.target)) {

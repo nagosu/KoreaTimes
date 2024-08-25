@@ -1,5 +1,5 @@
 .table-item--name {
-  width: 20%;
+  width: 15%;
 }
 
 .table-item--email {
@@ -10,15 +10,15 @@
   width: 20%;
 }
 
-.table-item--chat-date {
+.table-item--created-date {
+  width: 20%;
+}
+
+.table-item--result-view-button {
   width: 15%;
 }
 
-.table-item--chat-log-button {
-  width: 15%;
-}
-
-.table-item--chat-log-button button {
+.table-item--result-view-button button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,11 +32,11 @@
   transition: background-color 0.3s;
 }
 
-.table-item--chat-log-button button:hover {
+.table-item--result-view-button button:hover {
   background-color: var(--primary-button-hover-color);
 }
 
-.modal-chat-log-overlay {
+.modal-results-view-overlay {
   position: fixed;
   display: none;
   top: 0;
@@ -47,11 +47,11 @@
   z-index: 1000;
 }
 
-.modal-chat-log-overlay.fade-out {
+.modal-results-view-overlay.fade-out {
   animation: fadeOut 0.3s forwards;
 }
 
-.modal-chat-log-overlay .modal-chat-log-content {
+.modal-results-view-overlay .modal-results-view-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -71,7 +71,9 @@
   overflow-y: auto;
 }
 
-.modal-chat-log-overlay .modal-chat-log-content .modal-chat-log-close-button {
+.modal-results-view-overlay
+  .modal-results-view-content
+  .modal-results-view-close-button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -79,24 +81,16 @@
   cursor: pointer;
 }
 
-.modal-chat-log-content .logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  min-height: 60px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  background-color: #ededed;
-  border-radius: 12px;
+.modal-results-view-content .modal-results-view-title {
+  font-size: 2.4rem;
 }
 
-.modal-chat-log-content .modal-chat-log-title {
-  margin-top: 30px;
-  font-size: 2.2rem;
+.modal-results-view-content .modal-results-view-subtitle {
+  font-size: 2rem;
+  margin-top: 20px;
 }
 
-.modal-chat-log-content .chat-log-container {
+.modal-results-view-content .chat-log-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -133,8 +127,41 @@
   font-size: 1.5rem;
   font-weight: 400;
   text-align: start;
+  line-height: 2.5rem;
 }
 
 .chat-wrapper img {
   width: 500px;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.download-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.download-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 45px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-right: -100px;
+  gap: 10px;
+  background-color: var(--primary-button-color);
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.download-container button:hover {
+  background-color: var(--primary-button-hover-color);
 }
