@@ -228,7 +228,9 @@
                 <td class="table-item table-item--topic">카드뉴스 스크립트</td>
                 <td class="table-item table-item--chat-date">2024.07.01</td>
                 <td class="table-item table-item--chat-log-button">
-                  <button type="button">보기</button>
+                  <button type="button" onclick="openChatLogModal()">
+                    보기
+                  </button>
                 </td>
               </tr>
               <tr class="table-container">
@@ -239,7 +241,9 @@
                 <td class="table-item table-item--topic">요약</td>
                 <td class="table-item table-item--chat-date">2024.07.10</td>
                 <td class="table-item table-item--chat-log-button">
-                  <button type="button">보기</button>
+                  <button type="button" onclick="openChatLogModal()">
+                    보기
+                  </button>
                 </td>
               </tr>
               <tr class="table-container">
@@ -250,7 +254,9 @@
                 <td class="table-item table-item--topic">영상 스크립트</td>
                 <td class="table-item table-item--chat-date">2024.07.11</td>
                 <td class="table-item table-item--chat-log-button">
-                  <button type="button">보기</button>
+                  <button type="button" onclick="openChatLogModal()">
+                    보기
+                  </button>
                 </td>
               </tr>
               <tr class="table-container">
@@ -261,7 +267,9 @@
                 <td class="table-item table-item--topic">블로그</td>
                 <td class="table-item table-item--chat-date">2024.07.12</td>
                 <td class="table-item table-item--chat-log-button">
-                  <button type="button">보기</button>
+                  <button type="button" onclick="openChatLogModal()">
+                    보기
+                  </button>
                 </td>
               </tr>
               <tr class="table-container">
@@ -272,7 +280,9 @@
                 <td class="table-item table-item--topic">기사 초안</td>
                 <td class="table-item table-item--chat-date">2024.07.23</td>
                 <td class="table-item table-item--chat-log-button">
-                  <button type="button">보기</button>
+                  <button type="button" onclick="openChatLogModal()">
+                    보기
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -330,7 +340,44 @@
     </div>
     <!-- //로그아웃 모달 -->
 
+    <!-- 대화 로그 모달 -->
+    <div class="modal-chat-log-overlay">
+      <div class="modal-chat-log-content">
+        <img
+          src="../../static/images/icon/svg/Close_round.svg"
+          alt="닫기"
+          class="modal-chat-log-close-button"
+          onclick="closeChatLogModal()"
+        />
+        <div class="logo-container">logo</div>
+        <h1 class="modal-chat-log-title">Chat history</h1>
+        <div class="chat-log-container">
+          <div class="chat-log-item">
+            <span class="chat-log-title">User :</span>
+            <div class="chat-wrapper">
+              <span class="chat">Please explain this photo in detail.</span>
+              <img
+                src="../../static/images/png/Chat_Log_Sample.png"
+                alt="샘플 이미지"
+              />
+            </div>
+          </div>
+          <div class="chat-log-item">
+            <span class="chat-log-title">Chat bot :</span>
+            <div class="chat-wrapper">
+              <span class="chat"
+                >This old car was invented by Carl Benz, the founder of Benz, in
+                1885 and received a patent the following year.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //대화 로그 모달 -->
+
     <!-- 스크립트 -->
     <script src="../../static/js/logout/logout.js"></script>
+    <script src="../../static/js/user_management/user_chat_logs.js"></script>
   </body>
 </html>
